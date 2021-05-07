@@ -87,7 +87,7 @@ public class DayPlanner {
         System.out.println("Please give me the name of your activity.");
         Scanner scanner = new Scanner(System.in);
         String activity = scanner.nextLine();
-        System.out.println("Please give me the importance of this activity on a scale of 1-10.");
+        System.out.println("Please give me the level of importance for this activity on a scale of 1-10.");
         int importance = scanner.nextInt();
         System.out.println("Please enter the number of minutes it would take to complete this task. This value must be unique from other task's time values.");
         int time_to_complete = scanner.nextInt();
@@ -110,9 +110,9 @@ public class DayPlanner {
         for(int i = 0; i < num_of_tasks; i++)
         {
             System.out.println("=========================================");
-            System.out.println("Activity #" + i + ": " + planner.get(i).getTask_name());
-            System.out.println("Importance (from 0 - 1): " + planner.get(i).getImportance());
-            System.out.println("Estimated time to complete: " + planner.get(i).getTime_to_complete());
+            System.out.println("Activity #" + i+1 + ": " + planner.get(i).getTask_name());
+            System.out.println("Level of importance (from 1 - 10): " + planner.get(i).getImportance());
+            System.out.println("Estimated time to complete (in minutes): " + planner.get(i).getTime_to_complete());
         }
         System.out.println("=========================================");
         sort_through_planner();
