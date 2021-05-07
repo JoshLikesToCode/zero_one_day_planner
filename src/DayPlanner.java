@@ -28,7 +28,7 @@ public class DayPlanner {
 
     static void set_max_weight()
     {
-        System.out.println("How much time do you have to put towards tasks today?");
+        System.out.println("How much time (in minutes) do you have to put towards tasks today?");
         max_weight = scanner.nextInt();
     }
 
@@ -89,7 +89,7 @@ public class DayPlanner {
         String activity = scanner.nextLine();
         System.out.println("Please give me the importance of this activity on a scale of 1-10.");
         int importance = scanner.nextInt();
-        System.out.println("Lastly, please give me the estimated time to complete this task (this must be a unique integer).");
+        System.out.println("Please enter the number of minutes it would take to complete this task. This value must be unique from other task's time values.");
         int time_to_complete = scanner.nextInt();
         planner.add(new Tasks(importance, time_to_complete, activity));
     }
